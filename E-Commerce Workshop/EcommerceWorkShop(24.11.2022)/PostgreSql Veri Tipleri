@@ -138,7 +138,6 @@ CREATE TABLE tb_ogrenci_not (
 INSERT INTO tb_ogrenci_not (
   ogrenci,ders_adi,ders_notu)
 VALUES ((1,'ada','lovelace'), 'postgresql', 100);
-
 ```
 Burada görüldüğü gibi ogrenci alanındaki tüm bilgiler aynı alanda gelmiştir.
 * Bu alandaki verileri ayrı görmek için aşağıdaki şekilde sorgumuzu yazabiliriz:
