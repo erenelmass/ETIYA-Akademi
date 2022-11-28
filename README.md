@@ -7,7 +7,7 @@ group by categories.name;`
 
 <img src="28.11.22_SQL_Ödev/r1.png" width=40% height=40%>
 ## * A ve H arasındaki şehir isimleri (ORDER BY)
-`Select * from city where city_name between 'A' and 'H' order by city_name`
+`select * from city where city_name between 'A' and 'H' order by city_name`
 
 <img src="28.11.22_SQL_Ödev/r2.png" width=40% height=40%>
 ## * Ürün ismine göre ürün fiyatı değiştirme (UPDATE)
