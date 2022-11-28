@@ -1,10 +1,10 @@
 # 22.11.2022 SQL ÖDEV
 
 ## * Ürün sayısına göre kategori sıralaması (GROUP BY)
-`select Sum(stock), categories.name from categories 
+`select Sum(stock), categories.name from categories
 inner join product on categories.id = product.category_id
 group by categories.name;`
-![Result 1](28.11.22_SQL_Ödev/r1.png)
+![Result 1](28.11.22_SQL_Ödev/r1.png | width = 50)
 ## * A ve H arasındaki şehir isimleri (ORDER BY)
 ![Query 2](28.11.22_SQL_Ödev/q2.png)
 ![Result 2](28.11.22_SQL_Ödev/r2.png)
