@@ -4,7 +4,7 @@
 `select Sum(stock), categories.name from categories
 inner join product on categories.id = product.category_id
 group by categories.name;`
-![Result 1](28.11.22_SQL_Ödev/r1.png = 250x250)
+<img src="28.11.22_SQL_Ödev/r1.png" width=50% height=50%>
 ## * A ve H arasındaki şehir isimleri (ORDER BY)
 ![Query 2](28.11.22_SQL_Ödev/q2.png)
 ![Result 2](28.11.22_SQL_Ödev/r2.png)
