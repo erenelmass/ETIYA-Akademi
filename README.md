@@ -1,3 +1,5 @@
+# 22.11.2022 SQL ÖDEV
+
 ## Ürün sayısına göre kategori sıralaması (GROUP BY)
 ![Query 1](28.11.22_SQL_Ödev/q1.png)
 ![Result 1](28.11.22_SQL_Ödev/r1.png)
