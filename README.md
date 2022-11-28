@@ -7,21 +7,38 @@ group by categories.name;`
 
 <img src="28.11.22_SQL_Ödev/r1.png" width=25% height=25%>
 ## * A ve H arasındaki şehir isimleri (ORDER BY)
-![Query 2](28.11.22_SQL_Ödev/q2.png)
-![Result 2](28.11.22_SQL_Ödev/r2.png)
+`Select * from city 
+where city_name between 'A' and 'H' 
+order by city_name`
+
+<img src="28.11.22_SQL_Ödev/r2.png" width=25% height=25%>
 ## * Ürün ismine göre ürün fiyatı değiştirme (UPDATE)
-![Query 3](28.11.22_SQL_Ödev/q3.png)
-![Result 3](28.11.22_SQL_Ödev/r3p1.png)
-![Result 3](28.11.22_SQL_Ödev/r3p2.png)
+`Update product 
+set unit_price = '1999.00'
+where name = 'Kolye'`
+
+<img src="28.11.22_SQL_Ödev/r3p1.png" width=25% height=25%>
+<img src="28.11.22_SQL_Ödev/r3p2.png" width=25% height=25%>
 ## * İçinde Fransa, Türkiye ve Arjantin olan adreslere sahip userlar (IN)
-![Query 4](28.11.22_SQL_Ödev/q4.png)
-![Result 4](28.11.22_SQL_Ödev/r4.png)
+`Select first_name,last_name from users
+inner join address on users.address_id = address.id
+inner join country on address.country_id = country.id
+where country.country_name in ('Fransa', 'Türkiye', 'Arjantin')`
+
+<img src="28.11.22_SQL_Ödev/r4.png" width=25% height=25%>
 ## * Bütün bölgeler ve şehirler (LEFT JOIN)
-![Query 5](28.11.22_SQL_Ödev/q5.png)
-![Result 5](28.11.22_SQL_Ödev/r5.png)
+`Select * from district
+left join city on district.id = city.district_id`
+
+<img src="28.11.22_SQL_Ödev/r5.png" width=25% height=25%>
 ## * Bütün kullanıcılar ve siparişler (RIGHT JOIN)
-![Query 6](28.11.22_SQL_Ödev/q6.png)
-![Result 6](28.11.22_SQL_Ödev/r6.png)
+`Select * from orders
+right join customer on orders.customer_id = customer.id`
+
+<img src="28.11.22_SQL_Ödev/r6.png" width=25% height=25%>
 ## * Renklerin ve ürünlerin hepsini (FULL OUTER JOIN)
-![Query 7](28.11.22_SQL_Ödev/q7.png)
-![Result 7](28.11.22_SQL_Ödev/r7.png)
+`Select color.name as "Renk", product.name "Ürün" from product
+full outer join color on product.color_id = color.id
+order by product.name`
+
+<img src="28.11.22_SQL_Ödev/r7.png" width=25% height=25%>
