@@ -11,6 +11,6 @@ public interface ProductRepository extends JpaRepository<Product,Integer> {
     List<Product> findAllProductsByStockGreaterThanOrderByStockDesc(int stock);
 
     // JPQL
-    @Query("Select p from Product as p WHERE name=:name")
+    @Query("Select p from Product as p WHERE product_name=:name")
     Product findByName(String name);
 }
