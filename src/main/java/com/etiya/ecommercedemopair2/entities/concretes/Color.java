@@ -21,8 +21,8 @@ public class Color {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "color_name")
-    private String color_name;
+    @Column(name = "name")
+    private String name;
 
     @OneToMany(mappedBy = "color")
     @JsonIgnoreProperties("color")

@@ -15,15 +15,16 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetail {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @Column(name = "total")
-    private double total;
+    private Double total;
 
-    @Column(name = "coupon")
+    @Column(name = "coupon",nullable = true)
     private String coupon;
 
     @ManyToOne
@@ -35,5 +36,4 @@ public class OrderDetail {
     @JoinColumn(name = "product_id")
     @JsonIgnoreProperties("orderDetails")
     private Product product;
-
 }

@@ -1,8 +1,8 @@
-package com.etiya.ecommercedemo2.business.concretes;
+package com.etiya.ecommercedemopair2.business.concretes;
 
-import com.etiya.ecommercedemo2.business.abstracts.OrderService;
-import com.etiya.ecommercedemo2.entities.concretes.Order;
-import com.etiya.ecommercedemo2.repository.abstracts.OrderRepositoy;
+import com.etiya.ecommercedemopair2.business.abstracts.OrderService;
+import com.etiya.ecommercedemopair2.entities.concretes.Order;
+import com.etiya.ecommercedemopair2.repository.abstracts.OrderRepositoy;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ public class OrderManager implements OrderService {
         return orderRepositoy.getAllOrdersOrderById(id);
         //return null;
     }
-    public List<Order> findAllProductsUnitPriceBetween(int id){
-        return orderRepositoy.findAllProductsUnitPriceBetween(id);
-    }
+//    public List<Order> findAllProductsUnitPriceBetween(int id){
+//        return orderRepositoy.findAllProductsUnitPriceBetween(id);
+//    }
 }

@@ -10,16 +10,21 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "customers")
+@Table(name = "customer")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+
+    @Column(name = "payment_id")
+    private int payment_id;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Country {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +25,7 @@ public class Country {
     @Column(name = "country_name")
     private String country_name;
 
+    //FK
     @ManyToOne
     @JoinColumn(name = "city_id")
     @JsonIgnoreProperties("country")
@@ -32,4 +34,5 @@ public class Country {
     @OneToMany(mappedBy = "id")
     @JsonIgnoreProperties("id")
     private List<Address> addresses;
+
 }

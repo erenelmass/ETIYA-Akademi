@@ -1,6 +1,5 @@
 package com.etiya.ecommercedemopair2.entities.concretes;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +8,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "salesman")
 @Getter
@@ -16,6 +16,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Salesman {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,4 +34,5 @@ public class Salesman {
     @JoinColumn(name = "role_id")
     @JsonIgnoreProperties("salesman")
     private Role role;
+
 }

@@ -1,5 +1,4 @@
 package com.etiya.ecommercedemopair2.entities.concretes;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,13 +8,15 @@ import lombok.Setter;
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
-@Table(name = "address")
+@Table(name="address")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +25,7 @@ public class Address {
     @Column(name = "title")
     private String title;
 
+    //FK
     @ManyToOne
     @JoinColumn(name = "country_id")
     @JsonIgnoreProperties("address")
@@ -32,4 +34,6 @@ public class Address {
     @OneToMany(mappedBy = "id")
     @JsonIgnoreProperties("id")
     private List<User> users;
+
+
 }

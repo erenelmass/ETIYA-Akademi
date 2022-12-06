@@ -17,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +37,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "payment_id")
     @JsonIgnoreProperties("orders")
-    private PaymentMethod paymentMethod;
+    private PaymenMethod paymentMethod;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
